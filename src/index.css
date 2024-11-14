@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .custom-bullet {
+      @apply relative pl-6; /* Space for the bullet */
+    }
+  
+    .custom-bullet::before {
+      content: '';
+      @apply absolute left-0 top-1/2 transform -translate-y-1/2 w-3.5 h-3.5 border-2 border-white rounded-full bg-transparent opacity-45;
+    }
+  }
+
+  @font-face {
+    font-family: 'Square721';
+    src: url('src/fonts/Square721-BT-Roman_FontYukle/Square721 BT Roman.TTF') format('truetype'); /* Replace with the correct file path and format */
+    font-weight: normal;
+    font-style: normal;
+  }
